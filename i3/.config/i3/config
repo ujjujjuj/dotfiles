@@ -16,6 +16,8 @@ font pango:MesloLGMNerdFont 10
 
 exec_always --no-startup-id autotiling
 
+exec --no-startup-id nm-applet --sm-disable
+exec --no-startup-id blueman-applet
 exec --no-startup-id picom
 exec --no-startup-id feh --bg-scale ~/.config/backgrounds/nice-blue-background.png
 exec --no-startup-id xrdb -merge ~/.Xresources
@@ -31,7 +33,7 @@ set $term --no-startup-id alacritty
 # Set up gaps
 smart_gaps on
 smart_borders on
-set $inner_gaps 8
+set $inner_gaps 5 
 set $outer_gaps 0
 
 for_window [class="^.*"] border pixel 2
