@@ -29,3 +29,4 @@ style = "Regular"
 import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
+
