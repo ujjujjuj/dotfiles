@@ -31,3 +31,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 . "/home/ujjujjuj/.deno/env"
+
+export PATH="$PATH:/home/ujjujjuj/.cargo/bin"
+
+# bun completions
+[ -s "/home/ujjujjuj/.bun/_bun" ] && source "/home/ujjujjuj/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
