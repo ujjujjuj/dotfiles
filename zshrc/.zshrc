@@ -1,4 +1,5 @@
 eval "$(starship init zsh)"
+eval "$(pyenv init -)"
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export PGHOST="/var/run/postgresql"
@@ -27,12 +28,11 @@ esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+
 . "/home/ujjujjuj/.deno/env"
 
 export PATH="$PATH:/home/ujjujjuj/.cargo/bin"
+export PATH="$PATH:/home/ujjujjuj/.avm/bin"
 
 # bun completions
 [ -s "/home/ujjujjuj/.bun/_bun" ] && source "/home/ujjujjuj/.bun/_bun"
@@ -40,3 +40,8 @@ export PATH="$PATH:/home/ujjujjuj/.cargo/bin"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH="/home/ujjujjuj/.local/share/solana/install/active_release/bin:$PATH"
+export ANDROID_HOME="/home/ujjujjuj/Android/Sdk"
+
+export PATH="$PATH:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
